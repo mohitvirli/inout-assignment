@@ -118,3 +118,128 @@ button{
     font-size: 0.8em;
     margin-top: 0.4em;
 }
+
+.hero-text-wrapper {
+    width: 50%;
+    margin-top: 4em;
+    border-top: 10px solid #37e8c8;
+    padding-top: 4em;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+
+.hero-title{
+    width: 40%;
+    margin: 0 auto 4em;
+}
+
+.hero-title .hero-hours{
+    font-size: 14em;
+    color: #007ef9;
+    margin-bottom: 0;
+    font-weight: 500;
+    margin-top: 20px;
+}
+
+.hero-title .hero-subtext{
+    margin-top: -0.6em;
+    font-size: 5em;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.hero-text{
+    margin: 2em auto;
+    text-transform: uppercase;
+    font-weight: 500;
+    display: inline-flex;
+    flex-direction: column;
+}
+
+.hero-text > div{
+    text-align: justify;
+    margin-bottom: 10px;
+}
+
+.hero-text .hero-lg{
+    font-size: 1.5em;
+}
+
+.hero-text .hero-md{
+    font-size: 1.24em;
+}
+
+.hero-text .hero-sm{
+    font-size: 1em;
+}
+
+.hero-text .hero-xs{
+    font-size: 0.8em;
+    display: flex;
+    align-items: center;
+}
+
+.hero-text .line{
+    margin-left: 1em;
+    height: 1.2em;
+    flex: 1;
+    background-color: black;
+}
+
+.hero-bg{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.hero-bg > div{
+    position: absolute;
+}
+
+.hero-bg .square-1{
+    padding: 4px;
+    border: 10px solid #0264f0;
+    top: 1em;
+    left: 7em;
+    transform: rotate(45deg);
+}
+
+.hero-bg .square-2{
+    padding: 20px;
+    border: 14px solid #f20042;
+    top: 8em;
+    left: 3em;
+    transform: rotate(80deg);
+}
+
+.hero-bg .square-3{
+    border: 8px solid #fc7098;
+    top: 1em;
+    right: 10em;
+}
+
+.hero-bg .square-4{
+    padding: 10px;
+    border: 12px solid #fc7098;
+    top: 6em;
+    right: 1em;
+}
+
+
+.hero-bg .square-5{
+    border: 6px solid #1f65c2;
+    top: 14em;
+    right: 7em;
+    transform: rotate(45deg);
+}
+
+.hero-bg .circle-1{
+    padding: 40px;
+    border-radius: 50%;
+    border: 16px solid #f3b11f;
+    top: 18em;
+    right: 5em;
+    filter: blur(6px);
+}

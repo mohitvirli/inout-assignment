@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
 import TagContainer from './components/tags';
+import HeroText from './components/heroText';
+
 
 class App extends Component {
   render() {
@@ -15,6 +17,7 @@ class App extends Component {
 
                   <TagContainer/>
               </div>
+              <HeroText />
           </div>
       </div>
     );

@@ -60,6 +60,10 @@ class Tags extends Component {
         });
     };
 
+    continue = () => {
+        console.log(this.state.tags.map(d => d.value));
+    }
+
     render() {
         const { activeTag, tags, errorText } = this.state;
         return (
@@ -76,7 +80,7 @@ class Tags extends Component {
                 {errorText ? <div className="error-text">{errorText}</div> : ''}
                 <TagsList tags={tags} deleteTag={this.deleteTag} onSortEnd={this.onSortEnd}/>
                 <div className="submit-tags-wrapper">
-                    <button className="submit-tags-button">Continue</button>
+                    <button className="submit-tags-button" onClick={this.continue}>Continue</button>
                 </div>
             </div>
         );
