@@ -87,6 +87,4 @@ class Tags extends Component {
     }
 }
 
-//TODO: add button
-
 export default Tags;
