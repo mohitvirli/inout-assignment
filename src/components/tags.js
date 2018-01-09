@@ -26,15 +26,24 @@ class Tags extends Component {
     };
 
     addTag = () => {
-      const tags = this.state.tags.slice();
-      tags.push({
-          value: this.state.activeTag,
-          index: tags.length
-      });
-      this.setState({
-          activeTag: '',
-          tags
-      });
+        const {tags, activeTag} = this.state;
+
+        if (activeTag !== '' && tags.map(d => d.value).indexOf(activeTag) === -1) {
+            const newTags = tags.slice();
+            newTags.push({
+                value: activeTag,
+                index: tags.length
+            });
+            this.setState({
+                activeTag: '',
+                tags: newTags,
+                errorText: ''
+            });
+        } else if (tags.map(d => d.value).indexOf(activeTag) !== -1) {
+            this.setState({
+                errorText: 'Tag already added!'
+            })
+        }
     };
 
     deleteTag = (tagIndex) => {
@@ -52,7 +61,7 @@ class Tags extends Component {
     };
 
     render() {
-        const { activeTag, tags } = this.state;
+        const { activeTag, tags, errorText } = this.state;
         return (
             <div className="tags-wrapper">
                 <div className="tag-input-wrapper">
@@ -64,7 +73,7 @@ class Tags extends Component {
                         <button className="add-tag-button" disabled={tags.length === 10} onClick={this.addTag}>Add</button>
                     </div>
                 </div>
-
+                {errorText ? <div className="error-text">{errorText}</div> : ''}
                 <TagsList tags={tags} deleteTag={this.deleteTag} onSortEnd={this.onSortEnd}/>
                 <div className="submit-tags-wrapper">
                     <button className="submit-tags-button">Continue</button>

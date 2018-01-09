@@ -113,3 +113,8 @@ button{
     color: #fff;
     cursor: pointer;
 }
+
+.error-text{
+    font-size: 0.8em;
+    margin-top: 0.4em;
+}
