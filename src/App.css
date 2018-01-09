@@ -1,0 +1,115 @@
+body{
+    font-family: 'Rubik', sans-serif;
+}
+
+.app-wrapper{
+    border-top: 10px solid #37e8c8;
+}
+
+.app-container{
+    padding: 1em 0;
+    width: 1170px;
+    margin: 0 auto;
+}
+
+.app-width-adjust{
+    width: 50%;
+}
+
+.app-header{
+    font-weight: 500;
+    margin-top: 4em;
+}
+
+.app-subtext{
+    color: #767676;
+}
+
+.tags-wrapper{
+    margin-top: 3em;
+}
+
+.tag-input-wrapper{
+    display: flex;
+    position: relative;
+}
+
+.tag-input-container{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+}
+
+.tag-input-container label{
+    font-size: 0.8em;
+    margin-bottom: 1em;
+}
+
+.tag-input-container input{
+    padding: 0.6em;
+}
+
+.add-tag-wrapper{
+    flex: 1;
+    display: flex;
+    align-items: flex-end;
+}
+
+button{
+    border: none;
+    padding: 0.6em 1em;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.add-tag-button{
+    margin-left: 1em;
+    background-color: #f0f3fe;
+    color: #3871ff;
+    flex: 1;
+}
+
+.submit-tags-wrapper{
+
+}
+
+.submit-tags-button{
+    color: #fff;
+    background-color: #3871ff;
+    width: 100%;
+    margin-top: 1em;
+}
+
+.tags-list-wrapper{
+    padding: 2em 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tag-wrapper{
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    padding: 0.6em 1em;
+    background-color: #36eacd;
+    margin-right: 1em;
+    margin-bottom: 1em;
+}
+
+.tag-wrapper .tag-name{
+    margin-right: 0.6em;
+}
+
+.tag-wrapper .delete-tag{
+    background-color: #3d6966;
+    border-radius: 50%;
+    width: 1.1em;
+    height: 1.1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    cursor: pointer;
+}
