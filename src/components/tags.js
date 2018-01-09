@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import TagsList from './tagsList';
+import {arrayMove} from "react-sortable-hoc";
 
 
 class Tags extends Component {
@@ -42,7 +43,13 @@ class Tags extends Component {
         this.setState({
             tags
         })
-    }
+    };
+
+    onSortEnd = ({oldIndex, newIndex}) => {
+        this.setState({
+            tags: arrayMove(this.state.tags, oldIndex, newIndex),
+        });
+    };
 
     render() {
         const { activeTag, tags } = this.state;
@@ -58,7 +65,7 @@ class Tags extends Component {
                     </div>
                 </div>
 
-                <TagsList tags={tags} deleteTag={this.deleteTag}/>
+                <TagsList tags={tags} deleteTag={this.deleteTag} onSortEnd={this.onSortEnd}/>
                 <div className="submit-tags-wrapper">
                     <button className="submit-tags-button">Continue</button>
                 </div>
